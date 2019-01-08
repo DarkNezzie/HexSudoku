@@ -5,6 +5,7 @@
  */
 package hexsudoku;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,17 +17,17 @@ import javafx.stage.Stage;
  * @author Pedro Lemos
  */
 public class HexSudoku extends Application {
-    
+    public static Scene Mainscene;
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
-        Scene scene = new Scene(root);
+        Mainscene = new Scene(root);
         
-        stage.setScene(scene);
+        stage.setScene(Mainscene);
         stage.show();
     }
-
+    
     /**
      * @param args the command line arguments
      */
